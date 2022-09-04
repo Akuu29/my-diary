@@ -1,14 +1,15 @@
-const path = require("path")
+const path = require("path");
+const dotenv = require("dotenv-webpack");
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlPlugin = new HtmlWebpackPlugin({
     template: "./public/index.html",
     filename: "index.html",
-})
+});
 
 module.exports = {
     mode: 'development',
-    entry: './index.tsx',
+    entry: './src/index.tsx',
     output: {
         path: path.join(__dirname, '/dist'),
         filename: 'bundle.js'
@@ -23,15 +24,17 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.json']
+        extensions: ['.ts', '.tsx', '.js']
     },
     devServer: {
         static: {
             directory: path.join(__dirname, '/dist'),
         },
-        open: true
+        open: true,
+        historyApiFallback: true,
     },
     plugins: [
-        htmlPlugin
+        htmlPlugin,
+        new dotenv()
     ]
 }
