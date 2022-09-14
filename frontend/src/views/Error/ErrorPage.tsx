@@ -15,14 +15,10 @@ const message = css({
   fontFamily: "Arial Black",
 });
 
-const Error: FC = () => {
-  return (
-    <div css={errorContainer}>
-      <p css={message}>
-        There's nothing here!
-      </p>
-    </div>
-  );
-};
+const Error: FC = () => (
+  <div css={errorContainer}>
+    <p css={message}>There&apos;s nothing here!</p>
+  </div>
+);
 
 export default Error;

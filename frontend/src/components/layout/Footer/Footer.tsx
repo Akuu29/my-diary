@@ -15,14 +15,10 @@ const auther = css({
   borderBottom: "solid 3px #262626",
 });
 
-const Footer: FC = () => {
-  return (
-    <div css={footer}>
-      <h1 css={auther}>
-        Akeu@2022
-      </h1>
-    </div>
-  );
-};
+const Footer: FC = () => (
+  <div css={footer}>
+    <h1 css={auther}>Akeu@2022</h1>
+  </div>
+);
 
 export default Footer;

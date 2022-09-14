@@ -13,17 +13,13 @@ const homeContainer = css({
 
 const TBD = css({
   color: "#F8F8FF",
-  fontSize: "50px"
+  fontSize: "50px",
 });
 
-const Home: FC = () => {
-  return (
-    <div css={homeContainer}>
-      <p css={TBD}>
-        TBD
-      </p>
-    </div>
-  );
-};
+const Home: FC = () => (
+  <div css={homeContainer}>
+    <p css={TBD}>TBD</p>
+  </div>
+);
 
 export default Home;

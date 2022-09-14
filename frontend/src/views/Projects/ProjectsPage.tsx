@@ -13,17 +13,13 @@ const projectsContainer = css({
 
 const TBD = css({
   color: "#F8F8FF",
-  fontSize: "50px"
+  fontSize: "50px",
 });
 
-const Projects: FC = () => {
-  return (
-    <div css={projectsContainer}>
-      <p css={TBD}>
-        TBD
-      </p>
-    </div>
-  );
-};
+const Projects: FC = () => (
+  <div css={projectsContainer}>
+    <p css={TBD}>TBD</p>
+  </div>
+);
 
 export default Projects;

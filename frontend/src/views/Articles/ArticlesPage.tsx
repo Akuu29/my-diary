@@ -22,9 +22,7 @@ const title = css({
   paddingTop: 30,
 });
 
-const articleList = css({
-
-});
+const articleList = css({});
 
 export interface Article {
   id: string;
@@ -40,12 +38,12 @@ const Articles: FC = () => {
 
   useEffect(() => {
     setInitializeArticles();
-  }, [])
+  }, []);
 
   // 初期表示用のarticlesの取得、セット
   const setInitializeArticles = async () => {
     const initializeArticles = await ArticleApi.getArticles();
-    if(initializeArticles) {
+    if (initializeArticles) {
       setArticles(initializeArticles);
     }
   };
@@ -56,12 +54,10 @@ const Articles: FC = () => {
         <h1 css={title}>Articles</h1>
         <div css={articleList}>
           {articles?.map((article: Article) => (
-              <Link
-                to={`/articles/${article.id}`}
-                key={article.id}>
-                <h3>{article.title}</h3>
-                <time>{article.updated_at.toString()}</time>
-              </Link>
+            <Link to={`/articles/${article.id}`} key={article.id}>
+              <h3>{article.title}</h3>
+              <time>{article.updated_at.toString()}</time>
+            </Link>
           ))}
         </div>
       </div>

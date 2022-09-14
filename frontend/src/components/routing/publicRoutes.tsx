@@ -11,28 +11,28 @@ export const generatePublicRoutes = (): Array<RouteObject> => {
   const publicRoutes: Array<RouteObject> = [
     {
       index: true,
-      element: <Home />
+      element: <Home />,
     },
     {
       path: "profile",
-      element: <Profile />
+      element: <Profile />,
     },
     {
       path: "articles",
-      element: <Articles />
+      element: <Articles />,
     },
     {
       path: "articles/:articleId",
-      element: <Article />
+      element: <Article />,
     },
     {
       path: "projects",
-      element: <Projects />
+      element: <Projects />,
     },
     {
       path: "*",
-      element: <Error />
-    }
+      element: <Error />,
+    },
   ];
 
   return publicRoutes;

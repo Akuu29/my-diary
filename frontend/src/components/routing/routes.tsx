@@ -10,12 +10,8 @@ const routes: RouteObject[] = [
   {
     path: "/",
     element: <Default />,
-    children: [
-      ...generatePublicRoutes(),
-      ...generateAuthRoutes(false),
-      ...generateAdminRoutes(false),
-    ]
-  }
+    children: [...generatePublicRoutes(), ...generateAuthRoutes(false), ...generateAdminRoutes(false)],
+  },
 ];
 
 export default routes;

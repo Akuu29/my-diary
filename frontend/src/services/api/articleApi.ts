@@ -7,7 +7,8 @@ export class ArticleApi {
   static async getArticles(): Promise<Array<Article>> {
     return articlesSample;
   }
+
   static async getArticle(id: string): Promise<Article> {
-    return articlesSample.filter((article) => article.id == id)[0];
+    return articlesSample.filter((article) => article.id === id)[0];
   }
 }

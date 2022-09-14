@@ -6,8 +6,8 @@ export const generateAuthRoutes = (isAuth: boolean): Array<RouteObject> => {
   const authRoutes: Array<RouteObject> = [
     {
       path: process.env.AUTH_ROUTE,
-      element: !isAuth ? <Login /> : <></>
-    }
+      element: !isAuth ? <Login /> : <></>,
+    },
   ];
 
   return authRoutes;

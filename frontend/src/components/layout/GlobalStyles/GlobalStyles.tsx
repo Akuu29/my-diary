@@ -1,12 +1,8 @@
 import { css, Global } from "@emotion/react";
 import emotionReset from "emotion-reset";
 
-const reset = css(
-  emotionReset
-);
+const reset = css(emotionReset);
 
-const GlobalStyles = () => {
-  return <Global styles={reset}></Global>;
-};
+const GlobalStyles = () => <Global styles={reset} />;
 
 export default GlobalStyles;

@@ -13,17 +13,13 @@ const profileContainer = css({
 
 const TBD = css({
   color: "#F8F8FF",
-  fontSize: "50px"
+  fontSize: "50px",
 });
 
-const Profile: FC = () => {
-  return (
-    <div css={profileContainer}>
-      <p css={TBD}>
-        TBD
-      </p>
-    </div>
-  );
-};
+const Profile: FC = () => (
+  <div css={profileContainer}>
+    <p css={TBD}>TBD</p>
+  </div>
+);
 
 export default Profile;

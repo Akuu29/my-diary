@@ -6,9 +6,7 @@ import routes from "./components/routing/routes";
 const App: FC = () => {
   const router = useRoutes(routes);
 
-  return (
-    <>{router}</>
-  );
+  return <>{router}</>;
 };
 
 export default App;

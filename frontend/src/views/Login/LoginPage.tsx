@@ -13,17 +13,13 @@ const loginContainer = css({
 
 const TBD = css({
   color: "#F8F8FF",
-  fontSize: "50px"
+  fontSize: "50px",
 });
 
-const Login: FC = () => {
-  return (
-    <div css={loginContainer}>
-      <p css={TBD}>
-        TBD
-      </p>
-    </div>
-  );
-};
+const Login: FC = () => (
+  <div css={loginContainer}>
+    <p css={TBD}>TBD</p>
+  </div>
+);
 
 export default Login;
